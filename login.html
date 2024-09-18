@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Login</title>
+        <style>
+            body {
+                background-color: pink;
+            }
+            h1,
+            form {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Login</h1>
+        <form action="">
+            <img src="coffee-hero-section.png" alt="Hero" class="hero-image">
+            <input type="text" placeholder="Username" id="username"/>
+            <input type="text" placeholder="Kelas" id="kelas"/>
+            <input type="password" placeholder="Password" id="password"/>
+            <input type="button" value="Login" id="tombol"/>
+            <input type="button" value="Sign up" id="signUp"/>
+        </form>
+
+        <script>
+            const bnSignUp = document.querySelector("#signUp");
+            const bnTombol = document.querySelector("#tombol");
+            const txUsername = document.querySelector("#username");
+            const txPassword = document.querySelector("#password");
+            const txKelas = document.querySelector("#kelas");
+
+            bnTombol.addEventListener("click", function () {
+                if (txUsername.value == "Raihan" && txPassword.value == "rawr") {
+                    window.location = "pts.html";
+                } else {
+                    alert("Username dan password anda salah, silahkan cek kembali!")
+                }
+            });
+        </script>
+    </body>
+</html>
